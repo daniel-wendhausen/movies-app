@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{2c7f345d-210c-41ca-892f-4229889d2337}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MoviesApp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MovieDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Contants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IMovieService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MovieService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\GenresSingleton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MovieDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MovieViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Movie.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MessengingCenterAlert.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MovieDetailPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MoviePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MoviePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

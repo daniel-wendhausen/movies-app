@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoviesApp.Views.MovieDetailPage"
+             Title="{Binding Movie.Title}"
+             x:Name="BrowseMoviesDetailPage">
+    <ContentPage.Content>
+    <StackLayout Padding="10">
+            <Image Source="{Binding Movie.BackdropPath, StringFormat='https://image.tmdb.org/t/p/w500{0}'}" />
+                <Label Text="{Binding Movie.ReleaseDate, StringFormat='{0:dd/MM/yyyy}'}" />
+                <Label Text="{Binding Movie.Genres}" />
+                <Label Text="{Binding Movie.Overview}" />
+        </StackLayout> 
+  </ContentPage.Content>
+</ContentPage>
