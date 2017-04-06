@@ -1,8 +1,5 @@
 ﻿using MoviesApp.Models;
 
-using System.Collections.Generic;
-using System.Windows.Input;
-
 namespace MoviesApp.ViewModels
 {
     public class MovieDetailViewModel : BaseViewModel

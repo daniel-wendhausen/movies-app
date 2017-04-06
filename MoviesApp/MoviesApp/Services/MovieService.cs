@@ -6,7 +6,6 @@ using MoviesApp.Models;
 using System.Net.Http;
 using Xamarin.Forms;
 using System.Linq;
-using System.Globalization;
 
 [assembly: Dependency(typeof(MoviesApp.Services.MovieService))]
 namespace MoviesApp.Services

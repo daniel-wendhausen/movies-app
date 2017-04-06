@@ -5,11 +5,11 @@
              Title="{Binding Movie.Title}"
              x:Name="BrowseMoviesDetailPage">
     <ContentPage.Content>
-    <StackLayout Padding="10">
+        <StackLayout Padding="10">
             <Image Source="{Binding Movie.BackdropPath, StringFormat='https://image.tmdb.org/t/p/w500{0}'}" />
-                <Label Text="{Binding Movie.ReleaseDate, StringFormat='{0:dd/MM/yyyy}'}" />
-                <Label Text="{Binding Movie.Genres}" />
-                <Label Text="{Binding Movie.Overview}" />
-        </StackLayout> 
-  </ContentPage.Content>
+            <Label Text="{Binding Movie.ReleaseDate, StringFormat='{0:dd/MM/yyyy}'}" />
+            <Label Text="{Binding Movie.Genres}" />
+            <Label Text="{Binding Movie.Overview}" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 
 namespace MoviesApp.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MovieDetailPage : ContentPage
     {
         public MovieDetailPage(Movie movie)

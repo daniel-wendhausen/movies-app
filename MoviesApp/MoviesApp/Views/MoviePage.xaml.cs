@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 
 namespace MoviesApp.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MoviePage : ContentPage
     {
         MovieViewModel viewModel;
@@ -19,7 +19,7 @@ namespace MoviesApp.Views
 
         public async void BrowseMovieList_ItemAppearing(object sender, ItemVisibilityEventArgs e)
         {
-            if (e.Item == viewModel.Movies[viewModel.Movies.Count -1] && 
+            if (e.Item == viewModel.Movies[viewModel.Movies.Count - 1] &&
                 viewModel.CurrentPage < viewModel.TotalPages)
                 await viewModel.ExecuteLoadMoviesCommand();
         }
@@ -27,8 +27,8 @@ namespace MoviesApp.Views
         async void OnSelectedItem(object sender, SelectedItemChangedEventArgs e)
         {
             var movie = e.SelectedItem as Movie;
-                if (movie == null)
-                    return;
+            if (movie == null)
+                return;
 
             ((ListView)sender).SelectedItem = null;
 

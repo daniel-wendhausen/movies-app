@@ -2,9 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Linq;
-using MoviesApp.Helpers;
 using MoviesApp.Models;
-using MoviesApp.Views;
 
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
@@ -26,7 +24,7 @@ namespace MoviesApp.ViewModels
             get { return movies; }
             set { SetProperty(ref movies, value); }
         }
-        
+
         private IEnumerable<Genre> Genres { get; set; }
 
         public MovieViewModel()
@@ -34,20 +32,7 @@ namespace MoviesApp.ViewModels
             Movies = new ObservableCollection<Movie>();
             LoadMoviesCommand = new Command(async () => await ExecuteLoadMoviesCommand());
         }
-        
-        public string GetGenres
-        {
-            get
-            {
-                if (Genres.Count() == 0)
-                {
-                    return "não tem";
-                }
 
-                var keys = new int[] { 28, 12 };
-                return string.Join(",", Genres.Where(x => keys.Contains(x.Id)).Select(x => x.Name).ToList());
-            }
-        }
         public async Task ExecuteLoadMoviesCommand()
         {
             if (IsBusy)

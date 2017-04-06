@@ -6,13 +6,13 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MoviesApp
 {
-	public partial class App : Application
-	{
+    public partial class App : Application
+    {
         public App()
-		{
-			InitializeComponent();
+        {
+            InitializeComponent();
             var a = GenresSingleton.Instance;
             MainPage = new NavigationPage(new MoviePage());
         }
-	}
+    }
 }

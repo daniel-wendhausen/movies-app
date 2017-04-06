@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 namespace MoviesApp.Models
 {
     public class Movie
-	{
+    {
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
         [JsonProperty(PropertyName = "backdrop_path")]
