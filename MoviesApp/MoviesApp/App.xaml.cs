@@ -1,5 +1,4 @@
-﻿using MoviesApp.Services;
-using MoviesApp.Views;
+﻿using MoviesApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
