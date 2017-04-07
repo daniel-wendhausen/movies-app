@@ -11,7 +11,6 @@ namespace MoviesApp
         public App()
         {
             InitializeComponent();
-            var a = GenresSingleton.Instance;
             MainPage = new NavigationPage(new MoviePage());
         }
     }

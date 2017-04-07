@@ -24,7 +24,7 @@ namespace MoviesApp.Services
 
         private GenresSingleton()
         {
-            _genresLookupTask = GetGenresAsync();
+            _genresLookupTask = Task.Run(() => GenresSingleton.Instance.GetGenresAsync());
         }
 
         public IDictionary<int, string> GenresLookup
