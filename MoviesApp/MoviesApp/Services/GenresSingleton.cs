@@ -41,7 +41,7 @@ namespace MoviesApp.Services
         {
             using (var client = new HttpClient())
             {
-                var genre_url = new Uri(string.Format(Contants.GENRES, Contants.API_KEY));
+                var genre_url = new Uri(string.Format(Constants.GENRES_URL));
                 var response = await client.GetAsync(genre_url);
                 if (response.IsSuccessStatusCode)
                 {

@@ -41,6 +41,7 @@ namespace MoviesApp.Views
 
             if (viewModel.Movies.Count == 0)
                 viewModel.LoadMoviesCommand.Execute(null);
+            
         }
     }
 }

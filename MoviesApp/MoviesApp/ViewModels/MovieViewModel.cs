@@ -14,11 +14,10 @@ namespace MoviesApp.ViewModels
     public class MovieViewModel : BaseViewModel
     {
         public ICommand LoadMoviesCommand { get; set; }
-
         public int CurrentPage { get; set; } = 1;
         public int TotalPages { get; set; }
 
-        ObservableCollection<Movie> movies;
+        private ObservableCollection<Movie> movies;
         public ObservableCollection<Movie> Movies
         {
             get { return movies; }
@@ -49,12 +48,6 @@ namespace MoviesApp.ViewModels
             catch (Exception ex)
             {
                 Debug.WriteLine(ex);
-                //MessagingCenter.Send(new MessagingCenterAlert
-                //{
-                //    Title = "Error",
-                //    Message = "Unable to load items.",
-                //    Cancel = "OK"
-                //}, "message");
             }
             finally
             {

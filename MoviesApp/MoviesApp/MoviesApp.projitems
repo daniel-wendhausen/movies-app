@@ -18,7 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Contants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IMovieService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\MovieService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\GenresSingleton.cs" />
