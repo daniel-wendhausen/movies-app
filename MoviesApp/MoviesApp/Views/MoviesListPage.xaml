@@ -27,9 +27,9 @@
                                     <ColumnDefinition Width="100" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Image Source="{Binding BackdropPath, StringFormat='https://image.tmdb.org/t/p/w500{0}'}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"/>
+                                <Image Source="{Binding BackdropImageURL}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"/>
                                 <Label Text="{Binding Title}" Grid.Row="0" Grid.Column="1" />
-                                <Label Text="{Binding ReleaseDate, StringFormat='{0:dd/MM/yyyy}'}" Grid.Row="1" Grid.Column="1" />
+                                <Label Text="{Binding FormattedReleaseDate}" Grid.Row="1" Grid.Column="1" />
                                 <Label Text="{Binding Genres}" Grid.Row="2" Grid.Column="1" />
                             </Grid>
                         </ViewCell>

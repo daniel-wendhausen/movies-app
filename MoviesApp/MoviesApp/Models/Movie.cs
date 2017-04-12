@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MoviesApp.Helpers;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,17 +11,33 @@ namespace MoviesApp.Models
         [JsonProperty(PropertyName = "title")]
         public string Title { get; set; }
         [JsonProperty(PropertyName = "backdrop_path")]
-        public string BackdropPath { get; set; }
+        private string BackdropPath { get; set; }
         [JsonProperty(PropertyName = "genre_ids")]
         public ICollection<int> Genre { get; set; }
         [JsonProperty(PropertyName = "overview")]
         public string Overview { get; set; }
+        [JsonProperty(PropertyName = "release_date")]
+        public DateTime ReleaseDate { get; set; }
 
         [JsonIgnore]
         public string Genres { get; set; }
-
-        [JsonProperty(PropertyName = "release_date")]
-        public DateTime ReleaseDate { get; set; }
+        [JsonIgnore]
+        public string BackdropImageURL
+        {
+            get
+            {
+                return String.Format(Constants.IMAGE_BASE_URL, this.BackdropPath);
+            }
+        }
+        
+        [JsonIgnore]
+        public string FormattedReleaseDate
+        {
+            get
+            {
+                return String.Format(Constants.APP_DATE_FORMAT, this.ReleaseDate);
+            }
+        }
     }
 
     public class MovieResponse
