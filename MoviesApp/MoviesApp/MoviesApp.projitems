@@ -31,12 +31,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\MovieDetailPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\MoviePage.xaml.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MoviesListPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MoviePage.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MoviesListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

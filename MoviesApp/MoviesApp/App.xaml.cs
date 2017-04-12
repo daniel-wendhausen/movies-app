@@ -10,7 +10,7 @@ namespace MoviesApp
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MoviePage());
+            MainPage = new NavigationPage(new MoviesListPage());
         }
     }
 }

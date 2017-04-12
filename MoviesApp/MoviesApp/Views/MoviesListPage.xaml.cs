@@ -7,11 +7,11 @@ using Xamarin.Forms.Xaml;
 namespace MoviesApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MoviePage : ContentPage
+    public partial class MoviesListPage : ContentPage
     {
         MovieViewModel viewModel;
 
-        public MoviePage()
+        public MoviesListPage()
         {
             InitializeComponent();
             BindingContext = viewModel = new MovieViewModel();
